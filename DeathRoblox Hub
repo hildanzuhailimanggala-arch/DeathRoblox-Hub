@@ -1,0 +1,1092 @@
+local WindUI
+do
+local ok, result = pcall(function()
+    return require("./src/Init") 
+    end)
+
+if ok then
+WindUI = result
+else
+    WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+end
+end
+
+
+local Window = WindUI:CreateWindow({
+    Title = "DeathRoblox Hub",
+    Icon = "scroll-text",
+    Author = "Made By DeathRobloh_Uh",
+    Folder = "Script Wind Ui",
+    Size = UDim2.fromOffset(580, 460),
+    MinSize = Vector2.new(560, 350),
+    MaxSize = Vector2.new(850, 560),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 200,
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = true,
+    
+    User = {
+        Enabled = true,
+        Anonymous = false,
+        Callback = function()
+            print("clicked")
+        end,
+    },
+})
+
+Window:Tag({
+    Title = "v1.0.0",
+    Icon = "rocket",
+    Color = Color3.fromHex("#30ff6a"),
+    Border = true,
+})
+
+Window:EditOpenButton({
+    Title = "Open Script",
+    Icon = "monitor",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 2,
+    Color = ColorSequence.new(
+        Color3.fromHex("FF0F7B"),
+        Color3.fromHex("F89B29")
+    ),
+    OnlyMobile = false,
+    Enabled = true,
+    Draggable = true,
+})
+
+WindUI:Notify({
+    Title = "DeathRoblox Hub",
+    Content = "Script Loaded",
+    Duration = 6.5,
+    Icon = "check-check",
+    CanClose = false,
+})
+
+--[(About Ui)]--
+
+local AboutUiTab = Window:Tab({
+    Title = "About Ui",
+    Icon = "circle-question-mark",
+    Locked = false,
+})
+AboutUiTab:Select() -- Select Tab
+
+AboutUiTab:Section({
+        Title = "Why i made this ui?",
+        TextSize = 24,
+        FontWeight = Enum.FontWeight.SemiBold,
+    })
+    
+    AboutUiTab:Section({
+        Title = [[Why did I make this UI? Because it's to make it easier to execute any scripts in a specific game! Credits to the script.]],
+        TextSize = 18,
+        TextTransparency = .35,
+        FontWeight = Enum.FontWeight.Medium,
+    })
+
+AboutUiTab:Space()
+
+AboutUiTab:Button({
+    Title = "Destroy Ui",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    Window:Destroy()
+    end
+})
+
+
+--[(Section Tab)]--
+local ClientSection = Window:Section({
+    Title = "Client Script",
+    Icon = "server-off",
+    Opened = false,
+})
+local ServerSection = Window:Section({
+    Title = "Server Script",
+    Icon = "server",
+    Opened = false,
+})
+
+
+--[(Universal Games)]--
+
+local UniversalTab = ClientSection:Tab({
+    Title = "Universal Games",
+    Icon = "gamepad",
+    Locked = false,
+})
+
+local UniversalSection1 = UniversalTab:Section({ 
+    Title = "No Key",
+    Box = true,
+    Opened = true,
+})
+local UniversalCombinationSection = UniversalTab:Section({ 
+    Title = "Nice Script Combination",
+    Box = true,
+    Opened = true,
+})
+local UniversalScriptSection = UniversalTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+UniversalSection1:Button({
+    Title = "Dex ++",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://github.com/AZYsGithub/DexPlusPlus/releases/latest/download/out.lua"))()
+    end
+})
+UniversalSection1:Button({
+    Title = "Delta Keyboard",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
+    end
+})
+UniversalSection1:Button({
+    Title = "Nameless Admin",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-admin-REWORKED-43502"))()
+    end
+})
+UniversalSection1:Button({
+    Title = "Infinite Yield",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})
+UniversalSection1:Button({
+    Title = "PShadeUltimate",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
+    end
+})
+UniversalSection1:Button({
+    Title = "WarriorRobber Keyboard",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+    end
+})
+
+UniversalCombinationSection:Button({
+    Title = "Infinite Yield + Nameless Admin",
+    Desc = "Admin Command",
+    Locked = false,
+    Callback = function()
+    WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-admin-REWORKED-43502"))()
+    end
+})
+
+local DexPlusPlusCode = UniversalScriptSection:Code({
+    Title = "Dex++",
+    Code = [[loadstring(game:HttpGet("https://github.com/AZYsGithub/DexPlusPlus/releases/latest/download/out.lua"))()]]
+})
+local DeltaKeyboardScriptCode = UniversalScriptSection:Code({
+    Title = "Delta Keyboard",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()]]
+})
+local NamelessAdminScriptCode = UniversalScriptSection:Code({
+    Title = "Nameless Admin",
+    Code = [[loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-admin-REWORKED-43502"))()]]
+})
+local infiniteYieldScriptCode = UniversalScriptSection:Code({
+    Title = "Infinite Yield",
+    Code = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()]]
+})
+local PShadeUltimateScriptCode = UniversalScriptSection:Code({
+    Title = "PShadeUltimate",
+    Code = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()]]
+})
+local WarriorRobberKeyboardCode = UniversalScriptSection:Code({
+    Title = "WarriorRobber Keyboard",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()]]
+})
+
+--[(Evade)]--
+
+local EvadeTab = ClientSection:Tab({
+    Title = "Evade",
+    Icon = "user",
+    Locked = false,
+})
+
+local EvadeSection = EvadeTab:Section({ 
+    Title = "Have A Key",
+    Box = true,
+    Opened = true,
+})
+local EvadeSection1 = EvadeTab:Section({ 
+    Title = "No Key",
+    Box = true,
+    Opened = true,
+})
+local EvadeCombinationSection = EvadeTab:Section({ 
+    Title = "Nice Script Combination",
+    Box = true,
+    Opened = true,
+})
+local EvadeScriptSection = EvadeTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+EvadeSection:Button({
+    Title = "Draconic X",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Nyxarth910/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua'))()
+    end
+})
+EvadeSection:Button({
+    Title = "Draconic X Remake",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Unknownproooolucky/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua"))()
+    end
+})
+EvadeSection1:Button({
+    Title = "Dara",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://darahub.vercel.app/H8WJF2993DJ38RII8SI39X9811I8FI2KDFF9B9EKOWID8CKWW88DIC9X9/Mainloader.lua"))()
+    end
+})
+EvadeSection:Button({
+    Title = "Yin Yang",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yesimsoul/Yin-Yang-Hub/refs/heads/main/evade"))()
+    end
+})
+EvadeCombinationSection:Button({
+    Title = "Draconic X + Dara",
+    Desc = "Top 1",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Nyxarth910/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua'))()
+    loadstring(game:HttpGet("https://darahub.vercel.app/H8WJF2993DJ38RII8SI39X9811I8FI2KDFF9B9EKOWID8CKWW88DIC9X9/Mainloader.lua"))()
+    end
+})
+EvadeCombinationSection:Button({
+    Title = "Draconic X Remake + Dara",
+    Desc = "Top 2",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Unknownproooolucky/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua"))()
+    loadstring(game:HttpGet("https://darahub.vercel.app/H8WJF2993DJ38RII8SI39X9811I8FI2KDFF9B9EKOWID8CKWW88DIC9X9/Mainloader.lua"))()
+    end
+})
+EvadeCombinationSection:Button({
+    Title = "Yin Yang + Dara",
+    Desc = "Top 3",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yesimsoul/Yin-Yang-Hub/refs/heads/main/evade"))()
+    loadstring(game:HttpGet("https://darahub.vercel.app/H8WJF2993DJ38RII8SI39X9811I8FI2KDFF9B9EKOWID8CKWW88DIC9X9/Mainloader.lua"))()
+    end
+})
+
+local DraconicXCode = EvadeScriptSection:Code({
+    Title = "Draconic X",
+    Code = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/Nyxarth910/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua'))()]]
+})
+local DraconicXRemakeCode = EvadeScriptSection:Code({
+    Title = "Draconic X Remake",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/Unknownproooolucky/Draconic-Hub-X/refs/heads/main/files/Evade/Overhaul.lua"))()]]
+})
+local DaraCode = EvadeScriptSection:Code({
+    Title = "Dara",
+    Code = [[loadstring(game:HttpGet("https://darahub.vercel.app/H8WJF2993DJ38RII8SI39X9811I8FI2KDFF9B9EKOWID8CKWW88DIC9X9/Mainloader.lua"))()]]
+})
+local YinYangCode = EvadeScriptSection:Code({
+    Title = "Yin Yang",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/yesimsoul/Yin-Yang-Hub/refs/heads/main/evade"))()]]
+})
+
+--[(Last Letter)]--
+
+local LastLetterTab = ClientSection:Tab({
+    Title = "Last Letter",
+    Icon = "type-outline",
+    Locked = false,
+})
+
+local LastLetterSection = LastLetterTab:Section({ 
+    Title = "Have A Key",
+    Box = true,
+    Opened = true,
+})
+local LastLetterSection1 = LastLetterTab:Section({ 
+    Title = "No Key",
+    Box = true,
+    Opened = true,
+})
+local LastLetterScriptSection = LastLetterTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+LastLetterSection1:Button({
+    Title = "Ikmal Suggest Word",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iMalSamja/ikmal-script/main/latterscript.lua"))()
+    end
+})
+LastLetterSection:Button({
+    Title = "Word Helper V3",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://www.skrylor.com/api/loader/0ad0a0be-a21f-43c2-a45c-0c491e9b67e6"))()
+    end
+})
+
+local IkmalSuggestWordCode = LastLetterScriptSection:Code({
+    Title = "Ikmal Suggest Word",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/iMalSamja/ikmal-script/main/latterscript.lua"))()]]
+})
+local WordHelperV3Code = LastLetterScriptSection:Code({
+    Title = "Word Helper V3",
+    Code = [[loadstring(game:HttpGet("https://www.skrylor.com/api/loader/0ad0a0be-a21f-43c2-a45c-0c491e9b67e6"))()]]
+})
+
+--[(Forest)]--
+
+local ForestTab = ClientSection:Tab({
+    Title = "99 Night In The Forest",
+    Icon = "tree-pine",
+    Locked = false,
+})
+
+local ForestSection = ForestTab:Section({ 
+    Title = "Have A Key",
+    Box = true,
+    Opened = true,
+})
+local ForestSection1 = ForestTab:Section({ 
+    Title = "No Key",
+    Box = true,
+    Opened = true,
+})
+local ForestCombinationSection = ForestTab:Section({ 
+    Title = "Nice Script Combination",
+    Box = true,
+    Opened = true,
+})
+local ForestScriptSection = ForestTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+ForestSection1:Button({
+    Title = "Foxname",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()
+    end
+})
+ForestSection:Button({
+    Title = "H4x",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://H4xScripts.xyz/loader"))()
+    end
+})
+ForestSection:Button({
+    Title = "Lunor",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    end
+})
+ForestSection:Button({
+    Title = "Rift",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+    end
+})
+ForestSection:Button({
+    Title = "Speed X",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end
+})
+ForestSection:Button({
+    Title = "Toasty",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()
+    end
+})
+ForestSection1:Button({
+    Title = "Voidware",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+    end
+})
+
+ForestCombinationSection:Button({
+    Title = "H4x + Toasty + Voidware",
+    Desc = "Top 1",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://H4xScripts.xyz/loader"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+    end
+})
+ForestCombinationSection:Button({
+    Title = "H4x + Toasty",
+    Desc = "Top 2",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://H4xScripts.xyz/loader"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()
+    end
+})
+ForestCombinationSection:Button({
+    Title = "Toasty + Voidware",
+    Desc = "Top 3",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+    end
+})
+
+local FoxnameCode = ForestScriptSection:Code({
+    Title = "Foxname",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()]]
+})
+local H4xCode = ForestScriptSection:Code({
+    Title = "H4x",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua", true))()]]
+})
+local LunorCode = ForestScriptSection:Code({
+    Title = "Lunor",
+    Code = [[loadstring(game:HttpGet("https://lunor.dev/loader"))()]]
+})
+local RiftCode = ForestScriptSection:Code({
+    Title = "Rift",
+    Code = [[loadstring(game:HttpGet("https://rifton.top/loader.lua"))()]]
+})
+local SpeedXCode = ForestScriptSection:Code({
+    Title = "Speed X",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()]]
+})
+local ToastyCode = ForestScriptSection:Code({
+    Title = "Toasty",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/nouralddin-abdullah/ToastyHub-XD/refs/heads/main/hub-main.lua"))()]]
+})
+local VoidwareCode = ForestScriptSection:Code({
+    Title = "Voidware",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()]]
+})
+
+--[(Forge)]--
+
+local ForgeTab = ClientSection:Tab({
+    Title = "The Forge",
+    Icon = "anvil",
+    Locked = false,
+})
+
+local ForgeSection = ForgeTab:Section({ 
+    Title = "Have A Key",
+    Box = true,
+    Opened = true,
+})
+local ForgeSection1 = ForgeTab:Section({ 
+    Title = "No Key",
+    Box = true,
+    Opened = true,
+})
+local ForgeCombinationSection = ForgeTab:Section({ 
+    Title = "Nice Script Combination",
+    Box = true,
+    Opened = true,
+})
+local ForgeScriptSection = ForgeTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+ForgeSection:Button({
+    Title = "Chiyo",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/kaisenlmao/loader/refs/heads/main/chiyo.lua"))()
+    end
+})
+ForgeSection:Button({
+    Title = "Catraz",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/nurvian/Catraz-HUB/refs/heads/main/Catraz/main.lua"))
+    end
+})
+ForgeSection:Button({
+    Title = "Lunor",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    end
+})
+ForgeSection:Button({
+    Title = "Rift",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+    end
+})
+ForgeSection:Button({
+    Title = "Speed",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end
+})
+ForgeSection1:Button({
+    Title = "Voidworld",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/280c3c5ae0ed18010fea0d86c424fdb5.lua"))()
+    end
+})
+
+ForgeCombinationSection:Button({
+    Title = "Chiyo + Lunor",
+    Desc = "Top 1",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/kaisenlmao/loader/refs/heads/main/chiyo.lua"))()
+    loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    end
+})
+ForgeCombinationSection:Button({
+    Title = "Lunor + Rift",
+    Desc = "Top 2",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://lunor.dev/loader"))()
+    loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+    end
+})
+ForgeCombinationSection:Button({
+    Title = "Speed X + Voidworld",
+    Desc = "Top 3",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/280c3c5ae0ed18010fea0d86c424fdb5.lua"))()
+    end
+})
+
+local ChiyoCode = ForgeScriptSection:Code({
+    Title = "Chiyo",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/kaisenlmao/loader/refs/heads/main/chiyo.lua"))()]]
+})
+local CatrazCode = ForgeScriptSection:Code({
+    Title = "Catraz",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/nurvian/Catraz-HUB/refs/heads/main/Catraz/main.lua"))()]]
+})
+local Lunor1Code = ForgeScriptSection:Code({
+    Title = "Lunor",
+    Code = [[loadstring(game:HttpGet("https://lunor.dev/loader"))()]]
+})
+local Rift1Code = ForgeScriptSection:Code({
+    Title = "Rift",
+    Code = [[loadstring(game:HttpGet("https://rifton.top/loader.lua"))()]]
+})
+local SpeedX1Code = ForgeScriptSection:Code({
+    Title = "Speed X",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()]]
+})
+local VoidWorldCode = ForgeScriptSection:Code({
+    Title = "VoidWorld",
+    Code = [[loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/280c3c5ae0ed18010fea0d86c424fdb5.lua"))()]]
+})
+
+--[(Backdoor)]--
+
+local BackdoorTab = ServerSection:Tab({
+    Title = "Backdoor",
+    Icon = "hard-drive-download", -- optional
+    Locked = false,
+})
+
+local BackdoorSection = BackdoorTab:Section({ 
+    Title = "Backdoor Free",
+    Box = true,
+    Opened = true,
+})
+local BackdoorScriptSection = BackdoorTab:Section({ 
+    Title = "Raw Script",
+    Box = true,
+    Opened = false,
+})
+
+BackdoorSection:Button({
+    Title = "Aleksandre7871 Executor",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/aleksandre070716-cell/Aleksandre7871-EXECUTOR-/refs/heads/main/ALEKSANDRE7871%20EXECUTOR"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "Devil Bee BR",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/e05729613-cyber/DevilBeeBRScanner/refs/heads/main/Main"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "GavindR",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://pastefy.app/eLbdMbYl/raw"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "KR Backdoor",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/melinicovyra-cell/Roblox-script/refs/heads/main/Backdoor.%20Executor"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "Lalol",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script'))()
+    end
+})
+BackdoorSection:Button({
+    Title = "Starlight",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-starlight-best-backdoor-scanner-71960"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "TidalSS",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tidal-Serverside-Loader-63609"))()
+    end
+})
+BackdoorSection:Button({
+    Title = "Trowhack",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        WindUI:Notify({
+    Title = "Script Execute",
+    Content = "Script Loaded",
+    Duration = 5,
+    Icon = "bell",
+    CanClose = false,
+})
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Trowscript-backdoor-63356"))()
+    end
+})
+
+local Aleksandre7871ExecutorCode = BackdoorScriptSection:Code({
+    Title = "Aleksandre7871 Executor",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/aleksandre070716-cell/Aleksandre7871-EXECUTOR-/refs/heads/main/ALEKSANDRE7871%20EXECUTOR"))()]]
+})
+local DevilBeeBRCode = BackdoorScriptSection:Code({
+    Title = "Devil Bee BR",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/e05729613-cyber/DevilBeeBRScanner/refs/heads/main/Main"))()]]
+})
+local GavindRCode = BackdoorScriptSection:Code({
+    Title = "GavindR",
+    Code = [[loadstring(game:HttpGet("https://pastefy.app/eLbdMbYl/raw"))()]]
+})
+local KRBackdoorCode = BackdoorScriptSection:Code({
+    Title = "KR Backdoor",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/melinicovyra-cell/Roblox-script/refs/heads/main/Backdoor.%20Executor"))()]]
+})
+local LalolCode = BackdoorScriptSection:Code({
+    Title = "Lalol",
+    Code = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script'))()]]
+})
+local StarlightCode = BackdoorScriptSection:Code({
+    Title = "Starlight",
+    Code = [[loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-starlight-best-backdoor-scanner-71960"))()]]
+})
+local TidalSSCode = BackdoorScriptSection:Code({
+    Title = "TidalSS",
+    Code = [[loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tidal-Serverside-Loader-63609"))()]]
+})
+local TrowhackCode = BackdoorScriptSection:Code({
+    Title = "Trowhack",
+    Code = [[loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Trowscript-backdoor-63356"))()]]
+})
+
+--{(Require)}--
+
+local RequireTab = ServerSection:Tab({
+    Title = "Require",
+    Icon = "hard-drive", -- optional
+    Locked = false,
+})
+
+local GrabGunCode = RequireTab:Code({
+    Title = "Grab Gun",
+    Code = [[require(5146659840).Dark_Eccentric("Dark_Eccentric", "Username")]]
+})
+local HappyHubSSCode = RequireTab:Code({
+    Title = "HappyHubSS",
+    Code = [[require(88812096580830):Hload("Username")]]
+})
+local SensationCode = RequireTab:Code({
+    Title = "Sensation",
+    Code = [[require(100263845596551)("Username", ColorSequence.new(Color3.fromRGB(71, 148, 253), Color3.fromRGB(71, 253, 160)), "Standard")]]
+})
